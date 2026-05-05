@@ -1,0 +1,51 @@
+3) Create a Java program to check whether a student is eligible for a scholarship.
+
+Conditions:
+If attendance is greater than or equal to 85:
+If marks are greater than or equal to 90 then- "Full Scholarship"
+Else if marks are greater than or equal to 75 then -"Half Scholarship"
+Else - "No Scholarship"
+If attendance is less than 85:
+If marks are greater than or equal to 95 then - "Special Case Scholarship"
+Else - "Not Eligible"
+
+Use a method named checkScholarship()
+Nested if-else statements
+
+Sample Input
+Marks: 88
+Attendance: 90
+
+Sample Output
+Half Scholarship
+
+================================================================================
+
+4) Write a Java program that:
+
+Accepts a number N from user using the Scanner class
+Uses a for loop from 1 to N
+For every number:
+Print "Even" if divisible by 2
+Print "Odd" otherwise
+Also check:
+If divisible by both 2 and 3 then - print "Divisible by 2 and 3"
+
+Use a method named analyzeNumbers()
+for loop
+if-else
+
+Sample Input
+10
+
+Sample Output
+1 is Odd
+2 is Even
+3 is Odd
+4 is Even
+5 is Odd
+6 is Even and Divisible by 2 and 3
+7 is Odd
+8 is Even
+9 is Odd
+10 is Even
