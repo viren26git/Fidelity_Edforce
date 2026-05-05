@@ -1,0 +1,55 @@
+package fidelity.programs;
+
+import java.util.Scanner;
+
+public class Basic_Type {
+	
+	public int add(int a , int b)  //   method/ function
+	{
+		int c = a + b;      // c is local variable which is declared inside the method only and cannot be called outside the method
+		return c;          // returning the value from the method
+	}
+	
+	public float areaSquare(float radius)
+	{
+		float r = 3.14f * radius * radius;
+		return r;
+	}
+	
+	public void checkAge(int age)
+	{
+		if(age >=18)
+		{
+			System.out.println("The person can vote");
+		}
+		else{
+			System.out.println("The person cannot vote");
+		}
+	}
+
+	public static void main(String[] args) {      // main method
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the value of a");
+		int a = sc.nextInt();    //nextInt() is used to take the user input in int datatype
+		
+		System.out.println("Enter the value of b");
+		int b = sc.nextInt();
+		
+		// object of class
+		Basic_Type  bt = new Basic_Type();
+		int c= bt.add(a, b);    // method calling
+		System.out.println("The result is " + c);
+		
+		System.out.println("Enter the value of radius in float");
+		float t = sc.nextFloat();
+		
+		float y = bt.areaSquare(t);
+		System.out.println("The area of square  is " + y);
+		
+		bt.checkAge(34); 
+		
+		
+	}
+}
