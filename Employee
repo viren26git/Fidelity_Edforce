@@ -1,0 +1,46 @@
+package fidelity.programs;
+
+public class Employee
+{
+   //class variables should not be hardcoded
+   String name, dept;
+   int age;
+   float salary;
+   boolean working=true;
+   
+   public Employee()  // default consutrctor --> this will called automatically whenevr i create the object of the class
+   {
+	   name="Ravi";
+	   dept="IT";
+	   age=28;
+	   salary=45000.00f;
+	   working=true;
+   }
+   
+   public Employee(String name, String dept, int age, float salary)    // this constrcutor has paramters = parameteirzed consutctor
+   {
+	   this.name = name;
+	   this.dept = dept;
+	   this.age=age;
+	   this.salary=salary;
+   }
+
+   public void dispDetails()
+   {
+      System.out.println("The name of employee is " + name + " and working in departmnet name is " + dept + " and salary is " + salary +" working " + working);
+    }
+
+public static void main(String args[])
+{
+     Employee emp1 = new Employee("Kirti","IT",34, 4000.00f);
+     emp1.dispDetails();
+     
+     Employee emp2 = new Employee("Tarun","HR",38, 50000.00f);
+     emp2.dispDetails();
+     
+     Employee emp3 = new Employee();
+     emp3.dispDetails();
+     
+}
+
+}
