@@ -1,0 +1,23 @@
+
+
+
+Assignment 1:  (method + constructors)
+Create class as "Shape" 
+i want to calculate the area of the different shapes - square, rectangle, circle
+1. create 4 constructors - default contructor + three parameterized constrcutors for the shapes (using constructor)
+2. create 3 methods for (square, rectangle, circle) display which will display the value of the area calculated
+3. calcuate the area of the rhombus and triangle using the method 
+
+
+
+Assignment 2: create the 4 student objects with name s1,s2,s3,s4
+Declare the class "Student" and create member variables as below:
+   - String name
+   - int age
+   - section(char type)
+   - gender (char type)
+   - three int subject marks (subject1, subject2, subject3)
+
+(1) Calcuate the total marks and percentage obtained by every student (total= subject 1 + subject 2+ subject 3) by passing the values from the parameterized constructor
+(2) For s2 and s3 students pass subject 1 marks = 0 and dont pass it in constructor.
+(3) create method display ---> display all the s1, s2, s3 and s4 objects values (all the class variables + total marks + percentage)
