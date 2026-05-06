@@ -1,0 +1,57 @@
+package fidelity.programs;
+
+class Employee_Encapusaled{ 
+	
+	private int age;
+	private String name;
+	private long adhar_card; // secured variable
+	private String email;      // secured variable
+	
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public long getAdhar_card() {
+		return adhar_card;
+	}
+	public void setAdhar_card(long adhar_card) {
+		this.adhar_card = adhar_card;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
+}
+
+public class EncapsulDemo {
+
+	public static void main(String[] args) {
+	
+		Employee_Encapusaled emp = new Employee_Encapusaled();
+		// System.out.println(emp.name);  // we cannot call the private varaibles directly
+		
+		emp.setAge(19);
+		emp.setAdhar_card(4567433L);
+		emp.setName("Ravi"); 
+		emp.setEmail("ravi@gmail.com"); 
+		
+		System.out.println(emp.getAdhar_card()); 
+		System.out.println(emp.getAge());
+		System.out.println(emp.getEmail()); 
+		System.out.println(emp.getName()); 
+	}
+}
