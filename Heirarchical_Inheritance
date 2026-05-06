@@ -1,0 +1,43 @@
+package program.jav.inheritance;
+
+class MNC_Employee {
+	float salary = 40000;
+	
+	void dispSalary()
+	{
+		System.out.println("The Employee salary is :" +salary);
+	}
+	
+	void changed_salary(double hike){
+		double new_salary = salary + (salary *hike);
+		System.out.println("The updated salary will be: " +  new_salary);
+	}
+}
+
+class PermanentEmp extends MNC_Employee {
+	double hike = 0.5;
+}
+
+class TemporaryEmp extends MNC_Employee {
+	double hike = 0.35;
+}
+
+public class Hierarchical_Inheritance {
+	public static void main(String args[]) {
+		
+		PermanentEmp p = new PermanentEmp();
+		TemporaryEmp t = new TemporaryEmp();
+		
+		// All objects of inherited classes can access the variable of class Employee		
+		p.dispSalary();
+		t.dispSalary();
+		
+		System.out.println("Permanent Employee salary is :" + p.salary);
+		System.out.println("Hike for Permanent Employee is:" + p.hike);
+		p.changed_salary(p.hike);
+		
+		System.out.println("Temporary Employee salary is :" + t.salary);
+		System.out.println("Hike for Temporary Employee is :" + t.hike);
+		p.changed_salary(t.hike);
+	}
+}
