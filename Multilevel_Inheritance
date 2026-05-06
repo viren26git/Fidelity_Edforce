@@ -1,0 +1,65 @@
+package fidelity.programs;
+
+class EmployeParent
+{
+	int age;
+	String name;
+	String dept;
+	
+	public EmployeParent(int age, String name, String dept)
+	{
+		this.age= age;
+		this.name=name;
+		this.dept=dept;
+	}
+	
+	void disp(){
+		System.out.println("The employee name is :" + name + " and age is : " + age + "and working in dept :" +dept); 
+	}
+}
+
+class Person extends EmployeParent
+{
+	float salary;
+	String city;
+	
+	public Person(int age, String name, String dept,float salary, String city)
+	{
+		super(age,name,dept);
+		this.salary=salary;
+		this.city=city;
+	}
+	
+	void disp()  // we are overriding the method disp()
+	{
+		super.disp();  // we are calling the parent class disp() wit hthe help of the super();
+		System.out.println("The employee  residing in city:" + city +" with salary as" + salary ); 
+	}
+}
+
+class Temp extends Person
+{
+	String country;
+	
+	public Temp(int age, String name, String dept,float salary, String city, String country)
+	{
+		super(age,name,dept,salary,city);
+		this.country=country;
+	}
+	
+	void print()
+	{
+		System.out.println("The country is "+ country); 
+	}
+}
+
+public class InheritanceDemo {
+	public static void main(String[] args) {
+		
+		Temp p = new Temp(34,"Ravi","IT",45000.00f,"Delhi","India");
+		
+		System.out.println("The name of the employee is "+ p.name); 
+		p.disp();
+		p.print();
+	}
+}
