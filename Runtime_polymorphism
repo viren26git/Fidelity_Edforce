@@ -1,0 +1,46 @@
+package fidelity.programs;
+
+class Bank{
+	float roi=4.5f;
+	void display()
+	{
+		System.out.println("The rate of interest in common bank " + roi); 
+	}}
+
+class HDFC extends Bank{
+	float roi=7.1f;
+	void display()
+	{
+		System.out.println("The rate of interest in HDFC bank " + roi); 
+	}}
+
+class Axis extends Bank{
+	float roi=6.9f;
+	void display()
+	{
+		System.out.println("The rate of interest in Axis bank " + roi); 
+	} }
+
+class SBI extends Bank{
+	float roi=5.6f;
+	void display()
+	{
+		System.out.println("The rate of interest in SBI bank " + roi); 
+	}}
+
+
+public class RuntimePoly {
+	public static void main(String[] args) {
+		
+	 Bank b;  // reference variable of Bank is created
+	 
+	 b = new HDFC();  // b will behave as HDFC class object
+	 //b.display();
+	 
+	 b = new Axis();   //  b will behave as Axis class object
+	 //b.display();
+	 
+	 b = new SBI();
+	 b.display();
+	}
+}
