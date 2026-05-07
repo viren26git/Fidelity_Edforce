@@ -1,0 +1,66 @@
+package fidelity.programs;
+
+abstract class EmployeeAbs{
+	int empid;
+	String name;
+	float salary;
+	String projectName;
+	
+	public EmployeeAbs(int empid, String name, float salary, String projectName)
+	{
+		this.empid=empid;
+		this.name=name;
+		this.salary=salary;
+		this.projectName=projectName;
+	}
+	
+	void display(){  // non-abstract method
+		System.out.println("The employee id is " + empid+ " and name is " + name);
+	}
+	abstract void projectDetails();
+	abstract void salaryDetails();
+}
+
+abstract class Dashboard extends EmployeeAbs{
+	
+	public Dashboard(int empid, String name, float salary, String projectName){
+		super(empid,name,salary,projectName);
+	}
+
+	@Override
+	void projectDetails() {
+		System.out.println("The project is " + projectName);
+	}
+	
+	abstract void salaryDetails();
+	abstract void deptDetails();  // addtionally we are adding extra abstarct inside the class
+}
+
+class PersonDemo extends Dashboard{
+
+	public PersonDemo(int empid, String name, float salary, String projectName) {
+		super(empid, name, salary, projectName);
+	}
+
+	@Override
+	void salaryDetails() {
+		System.out.println("The salary details are "+ salary);
+	}
+
+	@Override
+	void deptDetails() {
+		System.out.println("This method belongs to Person class now");
+	}
+}
+
+public class AbstractClass {
+	public static void main(String[] args) {
+		
+		Dashboard emp= new PersonDemo(101,"Tarun",4500.00f,"ABS Project");
+        emp.display();
+        emp.salaryDetails();
+        emp.projectDetails();
+        emp.deptDetails();
+        
+	}
+}
